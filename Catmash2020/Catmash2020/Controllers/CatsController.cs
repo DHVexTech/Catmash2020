@@ -22,9 +22,6 @@ namespace Catmash2020.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Cat> GetAll()
-        {
-            throw new NotImplementedException();
-        }
+        public IEnumerable<Cat> GetAll() => _catService.GetAll();
     }
 }

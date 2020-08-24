@@ -7,9 +7,10 @@ namespace Catmash2020.Services
 {
     public class CatService
     {
-        public string GetAll()
+        public List<Cat> GetAll()
         {
-            throw new NotImplementedException();
+            List<Cat> cats = JsonHelper.GetJson<DataCat>("cats").Images;
+            return cats;
         }
     }
 }

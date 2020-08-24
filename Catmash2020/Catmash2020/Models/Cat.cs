@@ -1,11 +1,10 @@
-using System;
 using System.Collections.Generic;
 
-namespace Catmash2020
+namespace Catmash2020.Models
 {
     public class Cat
     {
-        public string URL{ get; set; }
+        public string URL { get; set; }
 
         public string Id { get; set; }
     }

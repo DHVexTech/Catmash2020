@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Catmash2020.Models;
 using Catmash2020.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;

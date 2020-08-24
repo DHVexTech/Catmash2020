@@ -19,12 +19,12 @@ namespace Catmash2020.Services
             }
         }
 
-        public static void WriteInDatabase<T>(List<T> users, string filename)
+        public static void WriteInDatabase<T>(T datas, string filename)
         {
             using (StreamWriter w = new StreamWriter(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Datas\" + filename + ".json").Replace(".Tests", "")))
             {
                 JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(w, users);
+                serializer.Serialize(w, datas);
             }
         }
     }

@@ -24,5 +24,11 @@ namespace Catmash2020.Controllers
 
         [HttpGet]
         public IEnumerable<Cat> GetAll() => _catService.GetAll();
+
+        [HttpGet("Ranking")]
+        public IEnumerable<CatVotes> GetRanking() => _catService.GetByVotes();
+
+        [HttpGet("{catId}")]
+        public Cat Get(string id) => _catService.GetCat(id);
     }
 }

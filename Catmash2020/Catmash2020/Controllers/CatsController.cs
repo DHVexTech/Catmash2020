@@ -28,7 +28,14 @@ namespace Catmash2020.Controllers
         [HttpGet("Ranking")]
         public IEnumerable<CatVotes> GetRanking() => _catService.GetByVotes();
 
-        [HttpGet("{catId}")]
+        [HttpGet("{id}")]
         public Cat Get(string id) => _catService.GetCat(id);
+
+        [HttpPost]
+        public IActionResult AddVote([FromBody]Cat cat) 
+        {
+            _catService.AddVote(cat.Id);
+            return Ok();
+        }
     }
 }
